@@ -1,0 +1,105 @@
+import { UpgradeConfig, UpgradeType } from './types';
+
+export const CLICK_UPGRADES: UpgradeConfig[] = [
+  {
+    id: 'click_1',
+    name: 'Cosmic Gloves',
+    type: UpgradeType.CLICK,
+    baseCost: 15,
+    basePower: 1,
+    description: 'Basic reinforced gloves for handling stardust.',
+    icon: 'Hand',
+    costMultiplier: 1.5,
+  },
+  {
+    id: 'click_2',
+    name: 'Laser Pickaxe',
+    type: UpgradeType.CLICK,
+    baseCost: 100,
+    basePower: 5,
+    description: 'A focused beam that extracts dust efficiently.',
+    icon: 'Zap',
+    costMultiplier: 1.6,
+  },
+  {
+    id: 'click_3',
+    name: 'Quantum Drill',
+    type: UpgradeType.CLICK,
+    baseCost: 1000,
+    basePower: 25,
+    description: 'Drills through the fabric of space-time.',
+    icon: 'Disc',
+    costMultiplier: 1.7,
+  },
+  {
+    id: 'click_4',
+    name: 'Matter Synthesizer',
+    type: UpgradeType.CLICK,
+    baseCost: 10000,
+    basePower: 150,
+    description: 'Generates dust from pure vacuum energy.',
+    icon: 'Atom',
+    costMultiplier: 1.8,
+  },
+];
+
+export const AUTO_UPGRADES: UpgradeConfig[] = [
+  {
+    id: 'auto_1',
+    name: 'Tiny Satellite',
+    type: UpgradeType.AUTO,
+    baseCost: 50,
+    basePower: 1, // 1 per second
+    description: 'A small orbiter collecting ambient dust.',
+    icon: 'Satellite',
+    costMultiplier: 1.4,
+  },
+  {
+    id: 'auto_2',
+    name: 'Mining Drone',
+    type: UpgradeType.AUTO,
+    baseCost: 250,
+    basePower: 8,
+    description: 'Automated drone swarm dedicated to mining.',
+    icon: 'Bot',
+    costMultiplier: 1.5,
+  },
+  {
+    id: 'auto_3',
+    name: 'Orbital Station',
+    type: UpgradeType.AUTO,
+    baseCost: 1500,
+    basePower: 40,
+    description: 'A manned station with industrial extractors.',
+    icon: 'Factory',
+    costMultiplier: 1.5,
+  },
+  {
+    id: 'auto_4',
+    name: 'Dyson Fragment',
+    type: UpgradeType.AUTO,
+    baseCost: 8000,
+    basePower: 200,
+    description: 'Harvests energy directly from nearby stars.',
+    icon: 'Sun',
+    costMultiplier: 1.6,
+  },
+  {
+    id: 'auto_5',
+    name: 'Black Hole Siphon',
+    type: UpgradeType.AUTO,
+    baseCost: 50000,
+    basePower: 1000,
+    description: 'Risky, but infinitely rewarding.',
+    icon: 'CircleDot',
+    costMultiplier: 1.7,
+  },
+];
+
+export const INITIAL_GAME_STATE = {
+  stardust: 0,
+  lifetimeStardust: 0,
+  clickCount: 0,
+  upgrades: {},
+  startTime: Date.now(),
+};

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Cosmic Clicker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+      
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #050510;
+        color: #ffffff;
+        overflow: hidden; /* Prevent scrolling for game feel */
+        touch-action: manipulation; /* Improve touch response */
+      }
+
+      /* Custom scrollbar for upgrade panels */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.5);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(99, 102, 241, 0.8);
+      }
+
+      /* Click animation utilities */
+      @keyframes floatUp {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-40px) scale(1.2); opacity: 0; }
+      }
+      .animate-float-up {
+        animation: floatUp 0.8s ease-out forwards;
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+        50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+      }
+      .planet-glow {
+        animation: pulse-glow 3s infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
